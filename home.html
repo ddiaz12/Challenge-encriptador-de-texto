@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <h1>Cifrado y decifrado de mensajes</h1>
-        <textarea name="input-text" id="input-text" placeholder="Ingresa tu mensaje" cols="30" rows="10"></textarea>
-        <button onclick="cifrar()">Cifrar</button>
-        <button onclick="descifrar()">Descifrar</button>
-        <textarea name="output-text" id="output-text" cols="30" rows="10" placeholder="Ningun mensaje cargado."></textarea><br/>
-        <script src=""></script>
-    </div>
+    <main>
+        <div  class="container">
+            <h1 class="center">Encriptador de Textos</h1>
+            <textarea name="input-text" id="input-text" placeholder="Ingresa tu mensaje" cols="30" rows="10"></textarea>
+            <button onclick="cifrar()">Cifrar</button>
+            <button onclick="descifrar()">Descifrar</button>
+            <textarea name="output-text" id="output-text" cols="30" rows="10" placeholder="Ningun mensaje cargado."></textarea><br/>
+            <footer>
+                <p></p>
+                <p class="copyright">&copy Code by Diego Diaz</p>
+            </footer>
+        </div>
+        <script src="app.js"></script>
+    </main>
+    
 </body>
 </html>

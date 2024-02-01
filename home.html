@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,35 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header>
+        <img src="img/Logo.svg" class="logo" alt="logo alura">
+    </header>
     <main>
-        <div  class="container">
-            <h1 class="center">Encriptador de Textos</h1>
-            <textarea name="input-text" id="input-text" placeholder="Ingresa tu mensaje" cols="30" rows="10"></textarea>
-            <button onclick="cifrar()">Cifrar</button>
-            <button onclick="descifrar()">Descifrar</button>
-            <textarea name="output-text" id="output-text" cols="30" rows="10" placeholder="Ningun mensaje cargado."></textarea><br/>
-            <footer>
-                <p></p>
-                <p class="copyright">&copy Code by Diego Diaz</p>
-            </footer>
-        </div>
+        <section>
+            <div class="contenedor-input">
+                <textarea class="input-text" id="input-text" placeholder="Ingresa el texto aqui" cols="30"
+                    rows="10"></textarea>
+                <p id="error-message" class="error-message"></p>   
+            </div>
+            <div class="contenedor-output">
+                <textarea class="output-text" id="output-text" cols="30" rows="10"
+                    placeholder="Ningun mensaje cargado."></textarea>
+            </div>
+            <div class="contenedor-botones">
+                <button onclick="validarinput(), cifrar()" id="btnCifrar" class="boton1">Cifrar</button>
+                <button onclick="descifrar()" class="boton2">Descifrar</button>
+                
+            </div>
+            <div class="contenedor-copiar">
+                <button onclick="copiar()" id="boton3" class="boton3" hidden>Copiar</button>
+            </div>
+        </section>
         <script src="app.js"></script>
     </main>
-    
+    <footer class="pie">
+        <p class="copyright">&copy Code by Diego Diaz</p>
+    </footer>
 </body>
 </html>

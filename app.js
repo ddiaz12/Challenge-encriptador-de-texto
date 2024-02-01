@@ -1,7 +1,7 @@
 function cifrar() {
     var inputText = document.getElementById('input-text').value;
     var outputText = document.getElementById('output-text');
-
+    
     // Convertir letras según las llaves de encriptación
     var result = "";
     for (var i = 0; i < inputText.length; i++) {
@@ -25,9 +25,14 @@ function cifrar() {
             default:
                 result += char;
         }
-    }
-
+    } 
+    esconder();  
     outputText.value = result;
+}
+
+function esconder(){
+    var btnCopiar = document.getElementById("boton3");
+    btnCopiar.hidden = false;
 }
 
 function descifrar() {
@@ -81,3 +86,22 @@ function descifrar() {
     outputText.value = result;
 }
 
+function limpiarCampo() {
+    return document.getElementById("input-text").value = "";
+}
+
+function validarinput(){
+    var texto = document.getElementById("input-text").value;
+    var error = document.getElementById("error-message");
+    var validacion = /^[a-z]+$/;
+
+    if (!validacion.test(texto)){
+        limpiarCampo();
+        error.innerText = "No se aceptan mayúsculas ni caracteres especiales";
+        setTimeout(function () {
+            error.innerText = "";
+        }, 3000);
+        return  false;
+    }
+    
+}

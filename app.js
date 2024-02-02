@@ -10,8 +10,6 @@ function cifrar() {
         .replace(/u/g, 'ufat');
 
     outputText.value = encryptedText;
-    mostrarEnPantalla();
-    ocultarEnPantalla();
 }
 
 function mostrarEnPantalla() {
@@ -71,6 +69,8 @@ function validarinput() {
             error.innerText = "";
         }, 3000);
         return false;
+    } else {
+        mostrarEnPantalla();
+        ocultarEnPantalla();
     }
-
 }

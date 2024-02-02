@@ -25,7 +25,10 @@
                     placeholder="Ningun mensaje cargado." hidden></textarea>
             </div>
             <div class="contenedor-botones">
-                <p> Solo letras minusculas y sin acentos</p>
+                <div class="contenedor-alerta">
+                    <img src="img/zondicons_exclamation-solid.svg" alt="" class="exclamation">
+                    <p class="alerta">Solo letras minusculas y sin acentos</p>
+                </div>
                 <button onclick="validarinput(), cifrar()" id="btnCifrar" class="boton1">Cifrar</button>
                 <button onclick="descifrar()" class="boton2">Descifrar</button>
             </div>

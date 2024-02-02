@@ -10,12 +10,20 @@ function cifrar() {
         .replace(/u/g, 'ufat');
 
     outputText.value = encryptedText;
-    mostrarBotonCopiar();
+    mostrarEnPantalla();
+    ocultarEnPantalla();
 }
 
-function mostrarBotonCopiar() {
+function mostrarEnPantalla() {
     var btnCopiar = document.getElementById("boton3");
+    var mostrarOutput = document.getElementById("output-text");
+    mostrarOutput.hidden = false;
     btnCopiar.hidden = false;
+}
+
+function ocultarEnPantalla() {
+    var ocultar = document.querySelector(".section-muneco");
+    ocultar.style.display = "none";
 }
 
 function descifrar() {

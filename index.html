@@ -10,46 +10,48 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/Logo.svg" class="logo" alt="logo alura">
-    </header>
-    <main>
-        <section>
-            <div class="contenedor-input">
-                <textarea class="input-text" id="input-text" placeholder="Ingresa el texto aqui" cols="30"
-                    rows="10"></textarea>
-                <p id="error-message" class="error-message"></p>
-            </div>
-            <div class="contenedor-output">
-                <textarea class="output-text" readonly id="output-text" cols="30" rows="10"
-                    placeholder="Ningun mensaje cargado." hidden></textarea>
-            </div>
-            <div class="contenedor-botones">
-                <div class="contenedor-alerta">
-                    <img src="img/zondicons_exclamation-solid.svg" alt="" class="exclamation">
-                    <p class="alerta">Solo letras minusculas y sin acentos</p>
+    <div class="body-conteiner">
+        <header>
+            <img src="img/Logo.svg" class="logo" alt="logo alura">
+        </header>
+        <main>
+            <section>
+                <div class="contenedor-input">
+                    <textarea class="input-text" id="input-text" placeholder="Ingresa el texto aqui" cols="30"
+                        rows="8"></textarea>
+                    <p id="error-message" class="error-message"></p>
                 </div>
-                <button onclick="validarinput(), cifrar()" id="btnCifrar" class="boton1">Cifrar</button>
-                <button onclick="descifrar()" class="boton2">Descifrar</button>
-            </div>
-            <div class="contenedor-copiar">
-                <button onclick="copiar()" id="boton3" class="boton3" hidden>Copiar</button>
-            </div>
-        </section>
-        <section class="section-muneco">
-            <div class="muneco">
-                <img src="img/Muñeco.svg" class="imgMuneco" alt="imagen de un muneco">
-            </div>
-            <div class="mensaje-muneco">
-                <h3 class="mensaje-titulo">Ningun mensaje fue <br> encontrado</h3>
-                <p class="mensaje-parrafo">Ingresa el texto que deseas encriptar o <br> descencriptar</p>
-            </div>
-        </section>
-        <script src="app.js"></script>
-    </main>
-    <footer class="pie">
-        <p class="copyright">&copy Code by Diego Diaz - 2024</p>
-    </footer>
+                <div class="contenedor-output">
+                    <textarea class="output-text" readonly id="output-text" cols="30" rows="8"
+                        placeholder="Ningun mensaje cargado." hidden></textarea>
+                </div>
+                <div class="contenedor-botones">
+                    <div class="contenedor-alerta">
+                        <img src="img/zondicons_exclamation-solid.svg" alt="" class="exclamation">
+                        <p class="alerta">Solo letras minusculas y sin acentos</p>
+                    </div>
+                    <button onclick="validarinput(), cifrar()" id="btnCifrar" class="boton1">Cifrar</button>
+                    <button onclick="descifrar()" class="boton2">Descifrar</button>
+                </div>
+                <div class="contenedor-copiar">
+                    <button onclick="copiar()" id="boton3" class="boton3" hidden>Copiar</button>
+                </div>
+            </section>
+            <section class="section-muneco">
+                <div class="muneco">
+                    <img src="img/Muñeco.svg" class="imgMuneco" alt="imagen de un muneco">
+                </div>
+                <div class="mensaje-muneco">
+                    <h3 class="mensaje-titulo">Ningun mensaje fue <br> encontrado</h3>
+                    <p class="mensaje-parrafo">Ingresa el texto que deseas encriptar o <br> descencriptar</p>
+                </div>
+            </section>
+            <script src="app.js"></script>
+        </main>
+        <footer class="pie">
+            <p class="copyright">&copy Code by Diego Diaz - 2024</p>
+        </footer>
+    </div>
 </body>
 
 </html>

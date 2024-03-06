@@ -29,14 +29,16 @@ function descifrar() {
     const outputText = document.getElementById('output-text');
 
     const decryptedText = inputText
-        .replace(/enter/g, 'e')
+        .replace(/ufat/g, 'u')
         .replace(/imes/g, 'i')
         .replace(/ai/g, 'a')
         .replace(/ober/g, 'o')
-        .replace(/ufat/g, 'u');
+        .replace(/enter/g, 'e');
 
     outputText.value = decryptedText;
 }
+
+
 
 function copiar() {
     let copyText = document.getElementById('output-text');
